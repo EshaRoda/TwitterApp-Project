@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+    <script src="https://use.fontawesome.com/08a955470d.js"></script>
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  </head>
+
+  <body>
+    <!-- Top nav bar (fixed) -->
+    <nav id="nav-bar">
+      <img class="logo" src="/images/bird.png">
+      <span class="header">Tweeter</span>
+      <span class="composer">
+      <i class="fa fa-pencil-square-o button-compose" aria-hidden="false"></i>
+        <span class="compose-text">Compose</span>
+      </span>
+    </nav>
+
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+    <section class="new-tweet">
+  <h2>Compose Tweet</h2>
+  <form method="POST" action="/tweets">
+    <textarea name="text" class='text' placeholder="What are you humming about?"></textarea>
+    <input class="submit" type="submit" value="Tweet">
+    <span class="counter">140</span>
+  </form>
+</section>
+
+ <section class="existing-tweet">
+ <!-- <article class="tweet">
+ <header>
+   <div class="rect"></div>
+    <p class="name">Bill Fields</p>
+    <p class="username">@MrFields</p>
+    <img class="profilepic" src="https://images.pexels.com/photos/20787/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb">
+ </header>
+  <main>
+    <div class ="text">Little tweet here</div>
+    </main>
+    <footer><p class="footer">10 days ago</p>
+    <img src="/images/edit.png">
+
+    </footer>
+      </article> -->
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
+
