@@ -39,6 +39,7 @@ function getDate(postDate) {
 
 function createTweetElement (data) {
   const $date = getDate(data.created_at);
+  const $text = escape(data.content.text);
   return $(`<article class="tweet">
      <header>
        <div class="rect"></div>
@@ -47,7 +48,7 @@ function createTweetElement (data) {
         <img class="profilepic" src="${data.user.avatars.regular}">
      </header>
     <main>
-      <div class ="text">${data.content.text}</div>
+      <div class ="text">${$text}</div>
     </main>
     <footer><p class="footer">${$date} days ago.</p>
     <span class="images">
@@ -56,6 +57,13 @@ function createTweetElement (data) {
     <i class="fa fa-heart" aria-hidden="true"></i>
     </span></footer>
     </article>`);
+}
+
+
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
 function loadTweets(){
@@ -99,6 +107,7 @@ $('.new-tweet form').on('submit', function (event){
 
 $(".composer").on("click", function(event) {
   $(".new-tweet").slideToggle("slow");
+    $("textarea").focus();
 });
 
 

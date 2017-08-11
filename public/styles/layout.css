@@ -113,4 +113,6 @@ article.tweet:hover .profilepic{
 .existing-tweet .text{
   padding-top: 20px;
   padding-left: 10px;
+  word-break: break-all;
+  /*overflow: auto;*/
 }
