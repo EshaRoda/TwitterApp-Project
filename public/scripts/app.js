@@ -56,7 +56,8 @@ function createTweetElement (data) {
     <i class="fa fa-repeat" aria-hidden="true"></i>
     <i class="fa fa-heart" aria-hidden="true"></i>
     </span></footer>
-    </article>`);
+    </article>`
+    );
 }
 
 
@@ -73,6 +74,7 @@ function loadTweets(){
   }).then(function(data){
     $('.existing-tweet').empty();
     renderTweets(data);
+    $('.new-tweet form').find('.counter').text('140');
   });
   // .catch(function (err) {
   //   console.log(err);
@@ -87,7 +89,7 @@ $('.new-tweet form').on('submit', function (event){
   var form = this;
   var $text = $(this).find('textarea').serialize();
   //console.log($(this).find('textarea').val().length);
-    if ($text.length - 5 === 0) {
+    if ($(this).find('textarea').val().length  === 0) {
       return alert("Please type something!");
     } else if ($(this).find('textarea').val().length > 140 ) {
       return alert("Too many characters!");
@@ -100,7 +102,6 @@ $('.new-tweet form').on('submit', function (event){
       //$(this).find('textarea').val("");
       form.reset();
       loadTweets();
-
     });
   }
 });
