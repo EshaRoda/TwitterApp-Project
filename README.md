@@ -13,7 +13,13 @@ This repository is the project based on HTML, CSS, JS, jQuery and AJAX front-end
 
 
 
+
+
+
 !["Screenshot of Empty Screen"](https://github.com/EshaRoda/TwitterApp-Project/blob/master/docs/emptyTweets.png)
+
+
+
 
 
 
@@ -21,7 +27,13 @@ This repository is the project based on HTML, CSS, JS, jQuery and AJAX front-end
 
 
 
+
+
+
 !["Screenshot of tweet compose box"](https://github.com/EshaRoda/TwitterApp-Project/blob/master/docs/tweetsComposer.png)
+
+
+
 
 
 
@@ -29,7 +41,13 @@ This repository is the project based on HTML, CSS, JS, jQuery and AJAX front-end
 
 
 
+
+
+
 !["Screenshot of tweets with script in it"](https://github.com/EshaRoda/TwitterApp-Project/blob/master/docs/tweetsScript.png)
+
+
+
 
 
 
