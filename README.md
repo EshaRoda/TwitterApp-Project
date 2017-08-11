@@ -10,4 +10,5 @@ This repository is the project based on HTML, CSS, JS, jQuery and AJAX front-end
 
 # TwitterApp-Project
 
-[Contribution guidelines for this project] (../docs/)
+[Contribution guidelines for this project]
+(docs/tweetsComposer.png)
