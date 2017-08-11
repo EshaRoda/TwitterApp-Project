@@ -10,4 +10,7 @@ This repository is the project based on HTML, CSS, JS, jQuery and AJAX front-end
 
 # TwitterApp-Project
 
-[Contribution guidelines for this project] - docs folder
+!["Screenshot of tweet compose box"](https://github.com/EshaRoda/TwitterApp-Project/blob/master/docs/tweetsComposer.png)
+!["Screenshot of tweets hover"](https://github.com/EshaRoda/TwitterApp-Project/blob/master/docs/tweetsHover.png)
+!["Screenshot of tweets with script in it"](https://github.com/EshaRoda/TwitterApp-Project/blob/master/docs/tweetsScript.png)
+!["Screenshot of tweets with more than one line"](https://github.com/EshaRoda/TwitterApp-Project/blob/master/docs/tweetsWithMoreContent.png)
