@@ -13,6 +13,7 @@ app.use(express.static("public"));
 const {MongoClient} = require("mongodb");
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
+// Handling database
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err)
     throw err;

@@ -30,6 +30,7 @@ function renderTweets (tweets){
   }
 }
 
+// convert the date and return into days
 function getDate(postDate) {
   let now = new Date();
   let dif = now - postDate;
@@ -37,6 +38,7 @@ function getDate(postDate) {
   return day;
 }
 
+// Tweet generator using template strings
 function createTweetElement (data) {
   const $date = getDate(data.created_at);
   const $text = escape(data.content.text);
@@ -60,13 +62,14 @@ function createTweetElement (data) {
     );
 }
 
-
+// created so that no one can enter scripts in tweets
 function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
+// Page load / Refresh
 function loadTweets(){
   $.ajax({
     url:'/tweets',
@@ -75,6 +78,7 @@ function loadTweets(){
     $('.existing-tweet').empty();
     renderTweets(data);
     $('.new-tweet form').find('.counter').text('140');
+        // Reset form counter after successful submit
   });
   // .catch(function (err) {
   //   console.log(err);
@@ -84,11 +88,11 @@ function loadTweets(){
 
 loadTweets();
 
+// Tweet submit handler
 $('.new-tweet form').on('submit', function (event){
   event.preventDefault();
   var form = this;
   var $text = $(this).find('textarea').serialize();
-  //console.log($(this).find('textarea').val().length);
     if ($(this).find('textarea').val().length  === 0) {
       return alert("Please type something!");
     } else if ($(this).find('textarea').val().length > 140 ) {
@@ -110,6 +114,7 @@ $(".composer").on("click", function(event) {
   $(".new-tweet").slideToggle("slow");
     $("textarea").focus();
 });
+
 
 
 tweets.forEach(function(tweet) {
